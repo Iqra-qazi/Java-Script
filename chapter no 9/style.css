@@ -1,0 +1,14 @@
+.headerheading{
+    color:#E4A9EA;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+.box{
+    height: 600px;
+    width: 600px;
+ border: 3px solid #E4A9EA;
+ background-color: blueviolet;
+ color: coral;
+border-radius: 5px;
+ 
+}
