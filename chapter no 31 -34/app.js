@@ -59,7 +59,61 @@ if(hour=="a.m"){
 var date = new Date ("12-31-25")
 console.log(date)
 // Question no 9
-var date = new Date("2 18 26")
-console.log(date);
+var date = new Date()
+var today=date.getTime()
+var ramadan = new Date("2 18 26")
+var firstRamadan =ramadan.getTime()
+var milli=firstRamadan-today
+var thisramadan =Math.round(milli/(1000*60*60*24))
+console.log(thisramadan);
 
-document.write("24 days have passed since 1st Ramadan ,2026"+"<br>")
+document.write(thisramadan+"days have passed since 1st Ramadan ,2026"+"<br>")
+//Question no 12
+var currentDate = new Date();
+document.write("Current date: " + currentDate + "<br>");
+
+var hours = currentDate.getHours();
+
+// subtract 1 hour
+currentDate.setHours(hours - 1);
+
+document.write("1 hour ago, it was: " + currentDate);
+// Question no 13
+var currentDate = new Date();
+alert("Current date: " + currentDate);
+
+currentDate.setFullYear(currentDate.getFullYear() - 100);
+
+alert("100 years back, it was: " + currentDate);
+//Question no 14
+var age = prompt("Enter your age:");
+var currentYear = new Date().getFullYear();
+var birthYear = currentYear - age;
+
+document.write("Your age is " + age + "<br>");
+document.write("Your birth year is " + birthYear);
+
+//Question no 15
+var customerName = "Iqra Fareed";
+var units = 410;
+var chargesPerUnit = 16;
+var latePaymentSurcharge = 350;
+
+var now = new Date();
+var monthNames = [
+  "January","February","March","April","May","June",
+  "July","August","September","October","November","December"
+];
+
+var netAmount = units * chargesPerUnit;
+var grossAmount = netAmount + latePaymentSurcharge;
+
+document.write("<h2>K-Electric Bill</h2>");
+document.write("Customer Name: " + customerName + "<br>");
+document.write("Current Month: " + monthNames[now.getMonth()] + "<br>");
+document.write("Number of Units: " + units + "<br>");
+document.write("Charges per Unit: " + chargesPerUnit.toFixed(2) + "<br><br>");
+
+document.write("Net Amount Payable (within Due Date): " + netAmount.toFixed(2) + "<br>");
+document.write("Late Payment Surcharge: " + latePaymentSurcharge.toFixed(2) + "<br>");
+document.write("Gross Amount Payable (after Due Date): " + grossAmount.toFixed(2));
